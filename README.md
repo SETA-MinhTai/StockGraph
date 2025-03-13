@@ -15,7 +15,7 @@ This project consists of two main parts: the backend (C#) and the frontend (Reac
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/StockGraph.git
+git clone https://github.com/SETA-MinhTai/StockGraph.git
 cd StockGraph/StockGraph
 ```
 
