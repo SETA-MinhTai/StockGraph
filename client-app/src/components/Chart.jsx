@@ -1,9 +1,10 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend } from "chart.js";
+import zoomPlugin from "chartjs-plugin-zoom";
 import "./Chart.css";
 
-ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend, zoomPlugin);
 
 const Chart = ({ stocks }) => {
     // Format data
@@ -38,8 +39,23 @@ const Chart = ({ stocks }) => {
                 },
             },
             tooltip: {
-                titleColor: "#c4f2f2", 
-                bodyColor: "#c4f2f2", 
+                titleColor: "#c4f2f2",
+                bodyColor: "#c4f2f2",
+            },
+            zoom: {
+                pan: {
+                    enabled: true,
+                    mode: "xy",
+                },
+                zoom: {
+                    wheel: {
+                        enabled: true,
+                    },
+                    pinch: {
+                        enabled: true,
+                    },
+                    mode: "xy",
+                },
             },
         },
         scales: {

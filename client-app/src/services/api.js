@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://localhost:7261/api/stock";
+const BASE_URL = "http://localhost:7261/api/stock";
 
 export const fetchStocks = async (query = {}) => {
     try {
